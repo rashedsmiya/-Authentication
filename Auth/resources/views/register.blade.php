@@ -30,5 +30,5 @@
             <p style="color: #ff04ff;">{{ $message }}</p>        
         @enderror
     </div>
-    <button style="submit">Register</button>
+    <button style="background-color: #ff0000;">Register</button>
 </form>

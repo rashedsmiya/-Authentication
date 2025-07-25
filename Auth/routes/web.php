@@ -15,3 +15,4 @@
     Route::post('/register', [RegistrationController::class, 'store'])->name('register');
 
     Route::get('/login', [LoginController::class, 'index']);
+    Route::post('/login', [LoginController::class, 'store'])->name('login');

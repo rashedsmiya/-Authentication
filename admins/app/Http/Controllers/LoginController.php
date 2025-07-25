@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;    
 use Illuminate\Support\Facades\Password;
+=======
+use Illuminate\Support\Facades\Validator; 
+>>>>>>> fc7981a (WIP: Save current changes before pull)
 class LoginController extends Controller
 {
     // Show login page
@@ -15,6 +19,7 @@ class LoginController extends Controller
     {
         return view('login');
     }
+<<<<<<< HEAD
 
     // Authenticate user
     public function authenticate(Request $request)
@@ -81,4 +86,7 @@ class LoginController extends Controller
         return redirect()->route('account.login');
     }   
 
+=======
+ 
+>>>>>>> fc7981a (WIP: Save current changes before pull)
 }

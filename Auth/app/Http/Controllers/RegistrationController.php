@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class RegistrationController extends Controller
 {
@@ -23,6 +25,8 @@ class RegistrationController extends Controller
             'password' => $request->password
          ]);
 
-         return 'User Created';
+         Auth::attempt($request->only('email', 'password'));    
+
+         return redirect('/dashboard')->with('message', 'Registration successful!');
     }  
 }
