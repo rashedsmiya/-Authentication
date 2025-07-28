@@ -1,17 +1,22 @@
 <?php
 
-    use App\Http\Controllers\DashboardController;
-    use App\Http\Controllers\LoginController;
-    use App\Http\Controllers\RegistrationController;        
-    use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LogoutController;
 
-    Route::get('/', function () {
-        return view('home');
-    });
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('home');
+});
 
 
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/register', [RegistrationController::class, 'index']);
-    Route::post('/register', [RegistrationController::class, 'store'])->name('register');
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/register', [RegistrationController::class, 'index']);
+Route::post('/register', [RegistrationController::class, 'store'])->name('register');
 
-    Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'store'])->name('login');
+
+Route::post('/logout', LogoutController::class)->name('logout');

@@ -12,8 +12,8 @@
     <div>
         <label for="#">Email</label>
         <input name="email" type="text" placeholder="Email" value="{{ old('email') }}">
-        @error('email') 
-            <p style="color: #ff0000;">{{ $message }}</p>        
+        @error('email')
+            <p style="color: #ff0000;">{{ $message }}</p>
         @enderror
     </div>
     <div>
@@ -27,7 +27,7 @@
         <label for="#">Confirm Password</label>
         <input name="password_confirmation" type="password" placeholder="Confirm Password">
         @error('password_confirmation')
-            <p style="color: #ff04ff;">{{ $message }}</p>        
+            <p style="color: #ff04ff;">{{ $message }}</p>
         @enderror
     </div>
     <button style="submit">Register</button>
